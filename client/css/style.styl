@@ -1,0 +1,531 @@
+@import "./client/css/mixins"
+@import "./client/css/init"
+
+html, body
+	margin 0
+
+body
+	background #183026 url('../images/body-bg.png')
+
+body,input,textarea,select
+	font-family 'Ubuntu', sans-serif
+	font-size 20px
+	line-height 1.75em
+	font-weight 300
+	letter-spacing 1px
+	color #3a3939
+
+h1,h2,h3,h4,h5,h6
+	font-family 'Ubuntu', sans-serif
+	font-weight 700
+	text-transform uppercase
+	line-height 1.75em
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+	color inherit
+	text-decoration none
+
+h2
+	font-size 1.25em
+	letter-spacing 8px
+
+h3
+	font-size 1em
+	letter-spacing 5px
+
+strong, b
+	font-weight 400
+
+em, i
+	font-style italic
+
+a
+	color #35b88f
+	transition border-color 0.35s ease-in-out, color 0.35s ease-in-out
+	text-decoration none
+	border-bottom dotted 1px rgba(53,184,143,0.5)
+	&:hover
+		border-bottom-color rgba(53,184,143,0)
+
+sub
+	position relative
+	top 0.5em
+	font-size 0.8em
+
+sup
+	position relative
+	top -0.5em
+	font-size 0.8em
+
+hr
+	border 0
+	border-top solid 1px #dad9d9
+	margin 2em 0 2em 0
+
+blockquote
+	border-left solid 0.5em #eae9e9
+	padding 1em 0 1em 2em
+	font-style italic
+
+p, ul, ol, dl, table
+	margin-bottom 1em
+
+header
+	margin-bottom 1em
+	p
+		display block
+		margin 0.5em 0 0 0
+		padding 0 0 1.5em 0
+
+footer
+	margin-top 1em
+
+br.clear
+	clear both
+
+section,
+article
+	margin-bottom 3em
+
+section > :last-child,
+article > :last-child
+	margin-bottom 0
+
+section:last-child,
+article:last-child
+	margin-bottom 0
+
+.row > section,
+.row > article
+	margin-bottom 0
+
+.image
+	display inline-block
+	border 0
+	img
+		display block
+		width 100%
+	&.featured
+		display block
+		width 100%
+		margin 0 0 2em 0
+	&.full
+		display block
+		width 100%
+	&.left
+		float left
+		margin 0 2em 2em 0
+	&.centered
+		display block
+		margin 0 0 2em 0
+		img
+			margin 0 auto
+			width auto
+
+ul.default
+	list-style disc
+	padding-left 1em
+	li
+		padding-left 1.5em
+		margin-top 1.5em
+		&:first-child
+			margin-top 0
+			margin-top 0
+
+ul.icons
+	cursor default
+	li
+		display inline-block
+	a
+		display inline-block
+		width 2.5em
+		height 2.5em
+		line-height 2.5em
+		text-align center
+		border 0
+
+ul.menu
+	cursor default
+	li
+		display inline-block
+		line-height 1em
+		border-left solid 1px #dad9d9
+		padding 0 0 0 0.5em
+		margin 0 0 0 0.5em
+		&:first-child
+			border-left 0
+			padding-left 0
+			margin-left 0
+
+ul.actions
+	cursor default
+	li
+		display inline-block
+		margin 0 0 0 0.5em
+		&:first-child
+			margin-left 0
+
+ol.default
+	list-style decimal
+	padding-left 1.25em
+	li
+		padding-left 1.25em
+		margin-top 1.5em
+
+form
+	label
+		display block
+		margin 0 0 0.5em 0
+	textarea
+		min-height 12em
+	.formerize-placeholder
+		color #5a5959 !important
+	ul.actions
+		margin-bottom 0
+		text-align center
+
+	input.button,
+	input.text,
+	select,
+	textarea
+		-webkit-appearance none
+		display block
+		border 0
+		background #f5f5f5
+		width 100%
+		padding 0.75em
+		transition background-color 0.35s ease-in-out
+	
+	input.text:focus,
+	select:focus,
+	textarea:focus
+		background #f2f2f2
+
+	input.text,
+	select
+		line-height 1em
+
+.table-wrapper
+	width 100%
+	overflow-x auto
+	-webkit-overflow-scrolling touch
+
+table
+	width 100%
+	&.default
+		width 100%
+		tbody
+			tr
+				border-top solid 1px #eae9e9
+				&:first-child
+					border-top 0
+		td
+			padding 0.75em 1.25em 0.75em 1.25em
+		th
+			text-align left
+			font-weight 400
+			padding 0.75em 1.25em 0.75em 1.25em
+		thead
+			background #f5f5f5
+
+.button
+	position relative
+	display inline-block
+	border 1px solid rgba(255, 255, 255, .25)
+	background rgba(239, 100, 6, .2)
+	color #fff
+	cursor pointer
+	text-decoration none
+	outline 0
+	padding 0.825em 2.5em
+	text-align center
+	font-size 0.825em
+	font-weight 400
+	transition background 250ms ease-in-out, border 250ms ease-in-out
+	&:hover
+		background rgba(239, 100, 6, .65)
+		border 1px solid rgba(255, 255, 255, .65)
+
+.box
+	position relative
+	margin-top 9em
+	margin-bottom 0
+	&:after
+		content ''
+		display block
+		position absolute
+		top -9em
+		left 50%
+		height 9em
+		border-left solid 1px #fff
+	&:before
+		content ''
+		display block
+		width 90px
+		height 66px
+		position absolute
+		left 50%
+		top -4.5em
+		margin-left -45px
+		margin-top -33px
+		background url('../images/arrow.svg') no-repeat
+	&:last-child
+		margin-bottom 0
+	&.style1
+		background #fff
+		padding 3em
+		.image
+			display block
+			position absolute
+			top 0
+			width 50%
+			height 100%
+			background #152E33
+			overflow hidden
+			img
+				position absolute
+				top 0
+				height 100%
+				width auto
+		.inner
+			& > :last-child
+				margin 0
+		&.right
+			.image
+				left 0
+				img
+					right 0
+			.inner
+				margin-left 50%
+				padding-left 3em
+		&.left
+			.image
+				right 0
+				img
+					left 0
+			.inner
+				margin-right 50%
+				padding-right 3em
+	&.style2
+		text-align center
+		header
+			display inline-block
+			background #fff
+			padding 2em 3em 2em 3em
+			margin 0
+			p
+				padding 0
+		.inner
+			position relative
+			padding 40px 0 0px 0
+			&:after
+				content ''
+				display block
+				position absolute
+				top 0
+				left 50%
+				height 100%
+				border-left solid 1px #fff
+			.row
+				position relative
+				&:before
+					content ''
+					display block
+					position absolute
+					top 50%
+					left 20px
+					width -moz-calc(100% - 40px)
+					width -webkit-calc(100% - 40px)
+					width -o-calc(100% - 40px)
+					width -ms-calc(100% - 40px)
+					width calc(100% - 40px)
+					border-bottom solid 1px #fff
+			.image
+				position relative
+				z-index 1
+				padding 20px
+	&.style3
+		background #fff
+		padding 3em
+		header
+			text-align center
+
+#header
+	position relative
+	text-align center
+	margin 0
+	padding 14em 0 14em 0
+	cursor default
+	background url('../images/fp-bg.svg') center 57.5% no-repeat
+	background-size cover
+	header
+		display inline-block
+		padding 0
+		h1
+			font-size 3em
+			line-height 1.25em
+			letter-spacing 7px
+			margin 0
+			color #fff
+			text-shadow -5px 0 0 rgba(255, 255, 255, .12), 5px 0 0 rgba(255, 255, 255, .12)
+		p
+			font-weight 300
+			font-style italic
+			color rgba(255, 255, 255, .65)
+			font-size 1em
+			padding 0
+			margin-top 0.35em
+		strong
+			font-size 1.5em
+			font-weight 700
+			color rgba(255, 255, 255, .95)
+
+#banner
+	position relative
+	color #fff
+	text-align center
+	background #192039 url('../images/banner-bg.svg') center center no-repeat
+	background-size 45%
+	padding 5em 0 5em 0
+	margin 0
+	.button
+		color #35b882
+	header
+		margin 0 0 1.5em 0
+		h2
+			font-weight 700
+			font-size 1.75em
+			letter-spacing 5px
+			text-shadow -3px 0 0 rgba(255, 255, 255, .05), 3px 0 0 rgba(255, 255, 255, .05)
+	p
+		margin 0
+	footer
+		margin 2em 0 0 0
+	a
+		color inherit
+		border-bottom-color rgba(255,255,255,0.5)
+		&:hover
+			border-bottom-color rgba(255,255,255,0)
+
+#footer
+	position relative
+	color #fff
+	text-align center
+	margin 4.5em 0 0 0
+	&:after
+		content ''
+		display block
+		position absolute
+		top -4.5em
+		left 50%
+		height 4.5em
+		border-left solid 1px #fff
+	a
+		color #fff
+		border-bottom-color rgba(255,255,255,0.5)
+		&:hover
+			color #35b88f
+			border-bottom-color rgba(53,184,143,0.5)
+	.copyright
+		margin 0 0 9em 0
+		font-size 0.8em
+
+.poptrox-popup
+	background #fff
+	box-sizing content-box
+	padding-bottom 3em
+	.loader
+		width 48px
+		height 48px
+		background url('../images/loader.gif')
+		position absolute
+		top 50%
+		left 50%
+		margin -24px 0 0 -24px
+	.caption
+		position absolute
+		bottom 0
+		left 0
+		background #fff
+		width 100%
+		height 3em
+		line-height 3em
+		text-align center
+		cursor default
+		z-index 1
+	.nav-previous
+		left 0
+		&:before
+			transform scaleX(-1)
+			-ms-filter "FlipH"
+			filter FlipH
+			left 0
+	.nav-next
+		right 0
+		&:before
+			right 0
+	.closer
+		position absolute
+		top 0
+		right 0
+		width 64px
+		height 64px
+		text-indent -9999px
+		z-index 2
+		opacity 0
+		transition opacity 0.5s ease-in-out
+		-webkit-tap-highlight-color rgba(255,255,255,0)
+		&:before
+			content ''
+			display block
+			position absolute
+			right 16px
+			top 16px
+			width 40px
+			height 40px
+			border-radius 100%
+			box-shadow inset 0 0 0 1px #fff
+			background rgba(255,255,255,0.1) url('images/poptrox-closer.svg') center center
+			color #fff !important
+			transition background-color 0.5s ease-in-out
+	&:hover
+		.closer
+			opacity 0.5
+			&:hover
+				opacity 1.0
+
+.poptrox-popup .nav-next,
+.poptrox-popup .nav-previous
+	position absolute
+	top 0
+	width 50%
+	height 100%
+	opacity 0
+	cursor pointer
+	background rgba(0,0,0,0.01)
+	transition opacity 0.5s ease-in-out
+	-webkit-tap-highlight-color rgba(255,255,255,0)
+
+.poptrox-popup .nav-next:before,
+.poptrox-popup .nav-previous:before
+	content ''
+	position absolute
+	width 96px
+	height 64px
+	background url('images/poptrox-nav.svg')
+	top -moz-calc(50% - 1.5em)
+	top -webkit-calc(50% - 1.5em)
+	top -o-calc(50% - 1.5em)
+	top -ms-calc(50% - 1.5em)
+	top calc(50% - 1.5em)
+	margin -32px 0 0 0
+
+.poptrox-popup:hover .nav-next,
+.poptrox-popup:hover .nav-previous
+	opacity 0.5
+
+.poptrox-popup:hover .nav-next:hover,
+.poptrox-popup:hover .nav-previous:hover
+	opacity 1.0
+
+
