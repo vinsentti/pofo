@@ -216,7 +216,7 @@ jQuery ->
         if skel.isActive("mobile")
           $header.css "padding", ""
         else
-          p = Math.max(192, ($window.height() - $header_header.outerHeight()) / 2)
+          p = Math.max(0, ($window.height() - $header_header.outerHeight()) / 2)
           $header.css "padding", p + "px 0 " + p + "px 0"
         return
       ).trigger "resize.overflow_fsh"
