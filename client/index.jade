@@ -11,13 +11,15 @@ html
 		script(src='js/skel.min.js')
 		script(src='js/bundle.js')
 
-		link(rel='stylesheet', href='css/style.css')
+		noscript
+			link(rel='stylesheet', href='css/no-script.css')
+			link(rel='stylesheet', href='css/style.css')
 	body
-		
+
 		section#header
 			header
-				h1 A Design Portfolio 
-				p 
+				h1 A Design Portfolio
+				p
 					| www.
 					strong GiantShapeShifter
 					| .net
@@ -26,49 +28,83 @@ html
 			.banner-bg-image
 				header
 					h2 Hello and welcome!
-				p My name is 
+				p My name is
 					strong= ' Ville Tervo '
 					| and this is my design portfolio.
-				p I'm a 
+				p I'm a
 					strong= ' graphic designer '
 					| with a primary focus on
-					strong= ' UI and UX design. '
+					strong= ' UX and UI design. '
 					| Most of the projects I've been working on the last few years are confidential.
 				p
 					i "Off the record, on the QT, and very hush-hush."
-				p That is why I don't have a pile of beautiful images to show. I'll share my views and insight about web design instead.
+				p That is why I don't have a pile of beautiful images to show. I'll share my views and insights about web design instead.
 
-		article#first.container.box.style1.right
-			a.image.full(href='http://ineedchemicalx.deviantart.com/art/Time-goes-by-too-fast-335982438')
+				a(href="#").button Please, continue
+
+		article.container.box.style4
+			header
+				h2 mo·tif
+					small \mō-ˈtēf\
+				h3.subtitle
+					| A singular, finite element
+					br
+					| that unifies the whole.
+
+		article.container.box.style1.right
+			a.image.full
 				img(src='images/pic01.jpg', alt='')
 			.inner
 				header
-					h2
-						| Lorem ipsum
-						br
-						| dolor sit amet
+					h3
+						| Interaction design
 				p
-					| Tortor faucibus ullamcorper nec tempus purus sed penatibus. Lacinia pellentesque eleifend vitae est elit tristique velit tempus etiam.
+					| All good web design is based on consistent interaction patterns and thoughtful user paths. Whether the end result is a complex service or a simple single-page application, the interaction patterns must remain solid.
+				p
+					| The more frequent you are able to validate ideas with real users, the better. Radip sketches, paper prototypes, functional wireframes - they all do the trick.
+				p
+					| Interactions must be responsive to the user's skills and motivations. End-users shouldn't be forced to learn a new language every time a new service is introduced. Interaction design is there to assure monolingualism.
 
 		article.container.box.style1.left
-			a.image.full(href='http://ineedchemicalx.deviantart.com/art/Kingdom-of-the-Wind-348268044')
+			a.image.full
 				img(src='images/pic02.jpg', alt='')
 			.inner
 				header
-					h2
-						| Mollis posuere
-						br
-						| lectus lacus
+					h3
+						| User experience design
 				p
-					| Rhoncus mattis egestas sed fusce sodales rutrum et etiam ullamcorper. Etiam egestas scelerisque ac duis magna lorem ipsum dolor.
+					| Where interaction design makes sure that the end-product stands on a solid ground, user experience design fertilizes the soil for it to grow to be a great one.
+				p
+					| Everything needed can be found where it's expected to be. Transitions and page changes feel comforting and never get you lost. Hell, even page loads feel like time worth waiting!
+				p
+					| We all know how it feels when everything just magically slides into place. That's the result of great UX design. In short, it's job is to prevent frustration and increase happiness.
+
+		article.container.box.style1.right
+			a.image.full
+				img(src='images/pic02.jpg', alt='')
+			.inner
+				header
+					h3
+						| Visual design
+				p
+					| To continue the analogue, visual design makes the end-product blossom. It's all there - everything works, feels AND looks as it should.
+				p
+					| Successful visual design delivers the message that lies beneath the surface. It's the translator of feelings and thoughts behind the product.
+				p
+					| In software develoment, visual design is often seen just as the icing on a cake. That statement is true only when all other components are carefully crafted as well.
+				p
+					| Visual design can exists even without interactions or functionalities. It's the fuel for the brain to provoke feelings, ideas and images.
+
+		article.container.box.style4
+			header
+				h2 port·fo·lio
+					small \pȯrt-ˈfō-lē-ˌō\
+				h3.subtitle
+					| A selection of work compiled over time
+					br
+					| and used for assessing performance.
 
 		article.container.box.style2
-			header
-				h2 Magnis parturient
-				p
-					| Justo phasellus et aenean dignissim
-					br
-					| placerat cubilia purus lectus.
 			.inner.gallery
 				.row.flush
 					.3u
@@ -99,27 +135,34 @@ html
 
 		article.container.box.style3
 			header
-				h2 Nisl sed ultricies
-				p Diam dignissim lectus eu ornare volutpat orci.
+				h2 Quick facts
+				h3 Here are my competences and skills in a nutshell.
 			form
 				.row.half
 					.6u
-						input.text(type='text', name='name', placeholder='Name')
+						p
+							| I'm a 33-year-old Bachelor of Culture and Arts, living currently in Tampere, Finland.
+							| I've been working with web design for about 7 years. Currently I'm working as a designer in Leonidas Oy and as a freelancer at Kulma Collective Osk.
+						p
+							| My competences include the following:
+						ul
+							li Web layout design (Photoshop, Fireworks)
+							li Front-end development (HTML, CSS)
+							li Interaction and user experience design
+							li Logo & corporate identity design
+						p
+							| My main focus at the moment is on desktop UX and UI design, but I'm open for other opportunities as well.
 					.6u
-						input.text(type='text', name='email', placeholder='Email')
-				.row.half
-					.12u
-						textarea(name='message', placeholder='Message')
-				.row
-					.12u
-						ul.actions
-							li
-								a.button.form(href='#') Send Message
+						ul
+							li +358 40 576 1283
+							li ville.tervo [at] gmail.com
+							li Ville Tervo
+								br
+								| Sammonkatu 21 C54
+								br
+								| 33540 Tampere
 
 		section#footer
 			.copyright
 				ul.menu
-					li © Untitled. All rights reserved.
-					li
-						| Design:
-						a(href='http://html5up.net/') HTML5 UP
+					li © Ville Tervo. All rights reserved.

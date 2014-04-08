@@ -1,13 +1,26 @@
+#
+# Overflow 1.1 by HTML5 UP
+# html5up.net | @n33co
+# Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+#
+
+###
+###
+
+# Settings
+
+###
+###
 _settings =
-  
+
   # Full screen header
   useFullScreenHeader: true
-  
+
   # Parallax Background
   useParallax: true
   parallaxFactor: 10 # Lower = more intense. Higher = less intense.
-  parallaxLimit: 1680 # Performance tweak: turns off parallax if the viewport width exceeds this value
-  
+  parallaxLimit: 1920 # Performance tweak: turns off parallax if the viewport width exceeds this value
+
   # skelJS
   skelJS:
     prefix: "css/style"
@@ -46,7 +59,7 @@ _settings =
           collapse: true
           gutters: 20
 
-  
+
   # poptrox
   poptrox:
     useBodyOverflow: false
@@ -58,6 +71,15 @@ _settings =
     popupLoaderText: ""
     windowMargin: 10
     usePopupNav: true
+
+
+###
+###
+
+# jQuery Plugins
+
+###
+###
 
 # formerize
 jQuery.fn.n33_formerize = ->
@@ -164,6 +186,7 @@ jQuery.fn.n33_formerize = ->
 
   _form
 
+
 # scrolly
 jQuery.fn.n33_scrolly = (offset) ->
   jQuery(this).click (e) ->
@@ -191,6 +214,15 @@ jQuery.fn.n33_scrolly = (offset) ->
 
   return
 
+
+###
+###
+
+# Initialize
+
+###
+###
+
 # skelJS
 skel.init _settings.skelJS
 
@@ -198,15 +230,15 @@ skel.init _settings.skelJS
 jQuery ->
   $window = $(window)
   $body = $("body")
-  
+
   # Scrolly links
   $(".scrolly").n33_scrolly ->
     (if skel.isActive("mobile") then 70 else 190)
 
-  
+
   # Forms
   $("form").n33_formerize()  if skel.vars.IEVersion < 10
-  
+
   # Full Screen Header
   if _settings.useFullScreenHeader
     $header = $("#header")
@@ -216,13 +248,14 @@ jQuery ->
         if skel.isActive("mobile")
           $header.css "padding", ""
         else
-          p = Math.max(0, ($window.height() - $header_header.outerHeight()) / 2)
+          p = Math.max(192, ($window.height() - $header_header.outerHeight()) / 2)
           $header.css "padding", p + "px 0 " + p + "px 0"
         return
       ).trigger "resize.overflow_fsh"
       $window.load ->
         $window.trigger "resize.overflow_fsh"
         return
+
 
   # Parallax Background
   if _settings.useParallax
@@ -239,10 +272,10 @@ jQuery ->
         $bg = $body
       return
     ).trigger "resize.overflow_parallax"
-    
+
     # IE's smooth scroll kind of screws this up, so we have to turn it off.
     $window.unbind "scroll.overflow_parallax"  if skel.vars.IEVersion < 11
-  
+
   # Poptrox
   _settings.poptrox.overlayOpacity = 0  if skel.vars.IEVersion < 9
   $(".gallery").poptrox _settings.poptrox
