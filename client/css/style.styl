@@ -1,10 +1,21 @@
-@import "./client/css/mixins"
+﻿@import "./client/css/mixins"
+@import "./client/css/init"
+
+color-1 = #5C323E
+color-2 = #A82743
+color-3 = #E15E32
+color-4 = #C0D23E
+color-5 = #E5F04C
+
+text-light = #aaaaa4
+text-dark = #1e1e1d
 
 html, body
 	margin 0
+	padding 0
 
 body
-	background #183026 url('../images/body-bg.png')
+	background-image url('../images/body-bg.png')
 
 body,input,textarea,select
 	font-family 'Ubuntu', sans-serif
@@ -12,82 +23,56 @@ body,input,textarea,select
 	line-height 1.75em
 	font-weight 300
 	letter-spacing 1px
-	color rgba(255,255,255,0.85)
+	color text-dark
 
 h1,h2,h3,h4,h5,h6
 	font-family 'Ubuntu', sans-serif
-	font-weight 700
-	line-height 1.75em
+	line-height 1.5em
+	color text-dark
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
 	color inherit
 	text-decoration none
 	text-transform uppercase
 
+h1
+	font-size 1.5em
+	line-height 1em
+	text-transform uppercase
+
 h2
-	font-weight 700
-	font-size 1.75em
-	letter-spacing 5px
-	color rgba(255, 255, 255, .85)
-	text-shadow -3px 0 0 rgba(255, 255, 255, .1), 3px 0 0 rgba(255, 255, 255, .1)
-	small
-		font-size 0.75em
-		letter-spacing 1px
-		font-weight 300
-		text-shadow none
-		color rgba(255, 255, 255, .65)
-		line-height 1em
-		&:before
-			content '  '
+	font-size 1em
+	text-transform uppercase
+	margin 1.25em 0 1em 34px
+	.icon
+		float left
+		font-size 1.25em
+		margin 2px 12px 0 -10px
+		color color-2
 
 h3
-	font-size 1em
-	letter-spacing 1px
-	color #cd6b0d
-	&.subtitle
-		border-top 1px dotted rgba(255, 255, 255, .1)
+	font-size 0.625em
+	font-weight 700
 
 strong, b
-	font-weight 400
+	font-weight 700
 
 em, i
 	font-style italic
 
 a
-	color #35b88f
+	color text-dark
 	transition border-color 0.35s ease-in-out, color 0.35s ease-in-out
 	text-decoration none
-	border-bottom dotted 1px rgba(53,184,143,0.5)
+	border-bottom dotted 1px text-light
 	&:hover
-		border-bottom-color rgba(53,184,143,0)
-
-sub
-	position relative
-	top 0.5em
-	font-size 0.8em
-
-sup
-	position relative
-	top -0.5em
-	font-size 0.8em
-
-hr
-	border 0
-	border-top solid 1px #dad9d9
-	margin 2em 0 2em 0
-
-blockquote
-	border-left solid 0.5em #eae9e9
-	padding 1em 0 1em 2em
-	font-style italic
-
-p, ul, ol, dl, table
-	margin-bottom 1em
+		color color-4
+		border-bottom-color color-4
 
 p
-	font-size 0.75em
+	font-size 0.625em
 	line-height 1.5em
-	color rgba(255,255,255,0.85)
+	color text-dark
 
 header
 	margin-bottom 1em
@@ -114,409 +99,150 @@ section:last-child,
 article:last-child
 	margin-bottom 0
 
-.row > section,
-.row > article
-	margin-bottom 0
-
-.image
-	display inline-block
-	border 0
-	img
-		display block
-		width 100%
-	&.featured
-		display block
-		width 100%
-		margin 0 0 2em 0
-	&.full
-		display block
-		width 100%
-	&.left
-		float left
-		margin 0 2em 2em 0
-	&.centered
-		display block
-		margin 0 0 2em 0
-		img
-			margin 0 auto
-			width auto
-
-ul.default
-	list-style disc
-	padding-left 1em
-	li
-		padding-left 1.5em
-		margin-top 1.5em
-		&:first-child
-			margin-top 0
-			margin-top 0
-
-ul.icons
-	cursor default
-	li
-		display inline-block
-	a
-		display inline-block
-		width 2.5em
-		height 2.5em
-		line-height 2.5em
-		text-align center
-		border 0
-
-ul.menu
-	cursor default
-	li
-		display inline-block
-		line-height 1em
-		border-left solid 1px #dad9d9
-		padding 0 0 0 0.5em
-		margin 0 0 0 0.5em
-		&:first-child
-			border-left 0
-			padding-left 0
-			margin-left 0
-
-ul.actions
-	cursor default
-	li
-		display inline-block
-		margin 0 0 0 0.5em
-		&:first-child
-			margin-left 0
-
-ol.default
-	list-style decimal
-	padding-left 1.25em
-	li
-		padding-left 1.25em
-		margin-top 1.5em
-
-form
-	label
-		display block
-		margin 0 0 0.5em 0
-	textarea
-		min-height 12em
-	.formerize-placeholder
-		color #5a5959 !important
-	ul.actions
-		margin-bottom 0
-		text-align center
-
-	input.button,
-	input.text,
-	select,
-	textarea
-		-webkit-appearance none
-		display block
-		border 0
-		background #f5f5f5
-		width 100%
-		padding 0.75em
-		transition background-color 0.35s ease-in-out
-
-	input.text:focus,
-	select:focus,
-	textarea:focus
-		background #f2f2f2
-
-	input.text,
-	select
-		line-height 1em
-
-.table-wrapper
-	width 100%
-	overflow-x auto
-	-webkit-overflow-scrolling touch
-
-table
-	width 100%
-	&.default
-		width 100%
-		tbody
-			tr
-				border-top solid 1px #eae9e9
-				&:first-child
-					border-top 0
-		td
-			padding 0.75em 1.25em 0.75em 1.25em
-		th
-			text-align left
-			font-weight 400
-			padding 0.75em 1.25em 0.75em 1.25em
-		thead
-			background #f5f5f5
+.main-container
+	clear both
+	width 80%
+	max-width 794px
+	margin 0 auto
+	padding 1em 0
+	position relative
 
 .button
 	position relative
 	display inline-block
-	border-radius 2px
-	border 1px solid rgba(255, 255, 255, .1)
-	background #252a45
-	color #fff
+	background color-4
+	line-height 1em
 	cursor pointer
 	text-decoration none
 	outline 0
-	padding 0.825em 2.5em
+	padding 10px 1.5em
 	text-align center
-	font-size 0.825em
-	font-weight 400
-	transition background 250ms ease-in-out, border 250ms ease-in-out
+	font-size 0.625em
+	font-weight 700
+	transition border-color 150ms ease-in-out
+	margin-top 1em
+	border 3px double transparent
+	color #fff
 	&:hover
-		background rgba(255, 255, 255, .5)
-		border 1px solid rgba(255, 255, 255, .25)
-
-.box
-	position relative
-	margin-top 9em
-	margin-bottom 0
-	&:before
-		content ''
-		display block
-		width 150px
-		height 90px
-		position absolute
-		left 50%
-		top -4.5em
-		background url('../images/sp-bg.svg') center top no-repeat
-		background-size 100%
-		margin -45px 0 0 -75px
-	&:last-child
-		margin-bottom 0
-
-.box.style1
-	background #252a45
-	border 1px solid rgba(255, 255, 255, .1)
-	padding 1.5em 1.5em 2em 1.5em
-	margin-top 3em
-	margin-bottom 4.5em
-	h2
-		line-height 1.25em
-	.image
-		display block
-		position absolute
-		top 0
-		width 50%
-		height 100%
-		background #152E33
-		overflow hidden
-		img
-			position absolute
-			top 0
-			height 100%
-			width auto
-	.inner
-		& > :last-child
-			margin 0
-	&.right
-		.image
-			left 0
-			img
-				right 0
-		.inner
-			margin-left 50%
-			padding-left 2em
-	&.left
-		.image
-			right 0
-			img
-				left 0
-		.inner
-			margin-right 50%
-			padding-right 3em
-	&:before
-		display none
-		height 0
-		background none
-
-.box.style2
-	text-align center
-	margin-top 3em
-	header
-		display inline-block
-		margin 0
-	.image
-		position relative
-		z-index 1
-		padding 20px
-		border 1px solid rgba(255, 255, 255, .1)
-	&:before
-		display none
-		height 0
-		background none
-
-.box.style3
-	background #252a45
-	border 1px solid rgba(255, 255, 255, .1)
-	padding 3em
-	header
-		text-align center
-
-.box.style4
-	text-align center
-	header
-		display inline-block
-		margin 0
-
-#header
-	position relative
-	text-align center
-	margin 0
-	padding 14em 0 14em 0
-	cursor default
-	background url('../images/fp-bg.svg') center 57.5% no-repeat
-	background-size cover
-	header
-		display inline-block
-		padding 0
-		h1
-			font-size 3em
-			line-height 1.25em
-			letter-spacing 7px
-			margin 0
-			color rgba(255, 255, 255, .85)
-			text-shadow -5px 0 0 rgba(255, 255, 255, .1), 5px 0 0 rgba(255, 255, 255, .1)
-		p
-			font-weight 300
-			font-style italic
-			color rgba(255, 255, 255, .5)
-			font-size 1em
-			padding 0
-			margin-top 0.55em
-
-
-#banner
-	position relative
-	color #fff
-	text-align center
-	background #252a45 url('../images/banner-bg.svg') center center no-repeat
-	background-size 120%
-	padding 4.5em 0 5em 0
-	margin 0
-	border-top 1px solid rgba(255, 255, 255, .1)
-	border-bottom 1px solid rgba(255, 255, 255, .1)
-	header
-		margin 0 0 1.5em 0
-	p
-		width 40%
-		margin 0.875em auto
-		i
-			color #cd6b0d
-		strong
-			font-weight 700
-			color #cd6b0d
-
-#footer
-	position relative
-	color #fff
-	text-align center
-	margin 4.5em 0 0 0
-	a
+		border-color #fff
 		color #fff
-		border-bottom-color rgba(255,255,255,0.5)
-		&:hover
-			color #35b88f
-			border-bottom-color rgba(53,184,143,0.5)
-	.copyright
-		margin 0 0 9em 0
-		font-size 0.8em
 
-.poptrox-popup
+.page
+	height 1123px
 	background #fff
-	box-sizing content-box
-	padding-bottom 3em
-	.loader
-		width 48px
-		height 48px
-		background url('../images/loader.gif')
+	margin 0 auto
+	box-shadow 0 1px 0px rgba(0, 0, 0, .2)
+	border 1px solid #F2E9E1
+	
+.left
+	width 28%
+	float left
+
+.right
+	width 72%
+	float left
+
+.stripes
+	.stripe-col
+		height 8px
+		float left
+	.color-1
+		background color-1
+		width 25%
+	.color-2
+		background color-2
+		width 8.333332%
+	.color-3
+		background color-3
+		width 8.333332%
+	.color-4
+		background color-4
+		width 8.333332%
+	.color-5
+		background color-5
+		width 50%
+		padding-right 1px
+		margin-right -1px
+
+.page-content
+	width 100%
+	height 100%
+	padding 20px 40px
+	box-sizing border-box
+
+.headshot
+	overflow hidden
+	width 200px
+	height 200px
+	border-radius 100px
+	background url('../images/ville.jpg') no-repeat
+	background-size 150%
+	margin 1.25em auto
+
+.about
+	padding 2.5em 0 0 16px
+
+	h3
+		color color-2
+
+	p
+		margin-top 1em
+
+.time-line-row
+	padding-left 24px
+
+	.col
+		padding 12px 0 24px 0
+
+	p
+		color text-light
+
+	.time-line-wrapper
+		text-indent -9999px
+		position relative
+		&:after
+			content '*'
+
+	.time-line
 		position absolute
-		top 50%
-		left 50%
-		margin -24px 0 0 -24px
-	.caption
-		position absolute
-		bottom 0
+		top 12px
 		left 0
-		background #fff
+		height 100%
 		width 100%
-		height 3em
-		line-height 3em
-		text-align center
-		cursor default
-		z-index 1
-	.nav-previous
-		left 0
+
 		&:before
-			transform scaleX(-1)
-			-ms-filter "FlipH"
-			filter FlipH
-			left 0
-	.nav-next
-		right 0
-		&:before
-			right 0
-	.closer
+			position absolute
+			content ' '
+			display block
+			width 1px
+			height 100%
+			background #e5e5dc
+			margin-left 50%
+
+		&.end:before
+			background none
+
+	.time-point
+		width 16px
+		height 16px
+		background #FFFFFF
+		border-radius 8px
+		border 1px solid #e5e5dc
 		position absolute
 		top 0
-		right 0
-		width 64px
-		height 64px
-		text-indent -9999px
-		z-index 2
-		opacity 0
-		transition opacity 0.5s ease-in-out
-		-webkit-tap-highlight-color rgba(255,255,255,0)
+		left 50%
+		margin-left -8px
+
 		&:before
-			content ''
-			display block
+			content '*'
+			text-indent -9999px
 			position absolute
-			right 16px
-			top 16px
-			width 40px
-			height 40px
-			border-radius 100%
-			box-shadow inset 0 0 0 1px #fff
-			background rgba(255,255,255,0.1) url('images/poptrox-closer.svg') center center
-			color #fff !important
-			transition background-color 0.5s ease-in-out
-	&:hover
-		.closer
-			opacity 0.5
-			&:hover
-				opacity 1.0
+			left 4px
+			top 4px
+			width 8px
+			height 8px
+			border-radius 4px
+			background text-light
 
-.poptrox-popup .nav-next,
-.poptrox-popup .nav-previous
-	position absolute
-	top 0
-	width 50%
-	height 100%
-	opacity 0
-	cursor pointer
-	background rgba(0,0,0,0.01)
-	transition opacity 0.5s ease-in-out
-	-webkit-tap-highlight-color rgba(255,255,255,0)
-
-.poptrox-popup .nav-next:before,
-.poptrox-popup .nav-previous:before
-	content ''
-	position absolute
-	width 96px
-	height 64px
-	background url('images/poptrox-nav.svg')
-	top -moz-calc(50% - 1.5em)
-	top -webkit-calc(50% - 1.5em)
-	top -o-calc(50% - 1.5em)
-	top -ms-calc(50% - 1.5em)
-	top calc(50% - 1.5em)
-	margin -32px 0 0 0
-
-.poptrox-popup:hover .nav-next,
-.poptrox-popup:hover .nav-previous
-	opacity 0.5
-
-.poptrox-popup:hover .nav-next:hover,
-.poptrox-popup:hover .nav-previous:hover
-	opacity 1.0
-
-
+	.present:before
+		background color-4

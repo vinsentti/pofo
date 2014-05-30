@@ -24,9 +24,8 @@ transmogrifyCoffee = (debug) ->
   bundle.write('public/js/bundle.js')
 
 transmogrifyJade = (file) ->
-  filePath = process.env['PWD'] + '/' + file
   james.read(file)
-    .transform(jade(filename: filePath))
+    .transform(jade)
     .write(file
       .replace('client', 'public')
       .replace('.jade', '.html'))
@@ -73,4 +72,3 @@ james.task 'build_debug', ['browserify_debug', 'jade_static', 'stylus']
 james.task 'build', ['browserify', 'jade_static', 'stylus']
 james.task 'default', ['build_debug']
 james.task 'httpd', ['server']
-

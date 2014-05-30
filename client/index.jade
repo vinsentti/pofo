@@ -2,167 +2,140 @@
 html
 	head
 		title GiantShapeShifter // Design Portfolio of Ville Tervo
-		meta(http-equiv='content-type', content='text/html; charset=utf-8')
-		meta(name='description', content='')
-		meta(name='keywords', content='')
-		link(href='http://fonts.googleapis.com/css?family=Ubuntu:300,700,300italic', rel='stylesheet', type='text/css')
-		script(src='js/jquery.min.js')
-		script(src='js/jquery.poptrox.min.js')
-		script(src='js/skel.min.js')
+		meta(charset="utf-8")
+		
+		link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Ubuntu:300,700,300italic')
+		link(rel='stylesheet', type='text/css', href='fonts/fonts.css')
+		link(rel='stylesheet', type='text/css', href='css/style.css')
+
+		link(rel="stylesheet", media="only screen and (max-width: 1024px) and (min-width: 769px)", href="css/1024.css")
+		link(rel="stylesheet", media="only screen and (max-width: 768px) and (min-width: 481px)", href="css/768.css")
+		link(rel="stylesheet", media="only screen and (max-width: 480px)", href="css/480.css")
+
+		link(rel="shortcut icon", href="/favicon.ico")
+		
+		// Responsive and mobile friendly stuff
+		meta(name="HandheldFriendly", content="True")
+		meta(name="MobileOptimized", content="320")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		
+		script(src="js/modernizr-2.5.3-min.js")
 		script(src='js/bundle.js')
 
-		noscript
-			link(rel='stylesheet', href='css/no-script.css')
-			link(rel='stylesheet', href='css/style.css')
 	body
 
-		section#header
-			header
-				h1 A Design Portfolio
-				p
-					| www.
-					strong GiantShapeShifter
-					| .net
+		.main-container
 
-		section#banner
-			.banner-bg-image
+			section#header
 				header
 					h2 Hello and welcome!
-				p My name is
-					strong= ' Ville Tervo '
-					| and this is my design portfolio.
-				p I'm a
-					strong= ' graphic designer '
-					| with a primary focus on
-					strong= ' UX and UI design. '
-					| Most of the projects I've been working on the last few years are confidential.
-				p
-					i "Off the record, on the QT, and very hush-hush."
-				p That is why I don't have a pile of beautiful images to show. I'll share my views and insights about web design instead.
 
-				a(href="#").button Please, continue
+			section#pages
+				article.page
+					.section.group.stripes
+						.stripe-col.color-1
+						.stripe-col.color-2
+						.stripe-col.color-3
+						.stripe-col.color-4
+						.stripe-col.color-5
+					.page-content
 
-		article.container.box.style4
-			header
-				h2 mo·tif
-					small \mō-ˈtēf\
-				h3.subtitle
-					| A singular, finite element
-					br
-					| that unifies the whole.
+						.section.group
+							.col.span_4_of_12
+								.headshot
+							.col.span_8_of_12
+								.about
+									h1 Ville Tervo
+									h3 Web Designer and Web Developer
+									p I'm a 33-year-old Web Designer and Web Developer, currently living and working in Tampere, Finland. The purpose of this resume is to give a comprehensive impression of my skills and knowledge.
+									a.button(href='#') Quick facts
 
-		article.container.box.style1.right
-			a.image.full
-				img(src='images/pic01.jpg', alt='')
-			.inner
-				header
-					h3
-						| Interaction design
-				p
-					| All good web design is based on consistent interaction patterns and thoughtful user paths. Whether the end result is a complex service or a simple single-page application, the interaction patterns must remain solid.
-				p
-					| The more frequent you are able to validate ideas with real users, the better. Radip sketches, paper prototypes, functional wireframes - they all do the trick.
-				p
-					| Interactions must be responsive to the user's skills and motivations. End-users shouldn't be forced to learn a new language every time a new service is introduced. Interaction design is there to assure monolingualism.
+						h2 Work experience
+							span.icon.li_heart(aria-hidden="true")
 
-		article.container.box.style1.left
-			a.image.full
-				img(src='images/pic02.jpg', alt='')
-			.inner
-				header
-					h3
-						| User experience design
-				p
-					| Where interaction design makes sure that the end-product stands on a solid ground, user experience design fertilizes the soil for it to grow to be a great one.
-				p
-					| Everything needed can be found where it's expected to be. Transitions and page changes feel comforting and never get you lost. Hell, even page loads feel like time worth waiting!
-				p
-					| We all know how it feels when everything just magically slides into place. That's the result of great UX design. In short, it's job is to prevent frustration and increase happiness.
+						.section.group.time-line-row
+							.col.span_3_of_12
+								h3 Kulma Collective
+								p 01/2012 -
+							.col.span_1_of_12.time-line-wrapper
+								.time-line
+									.time-point.present
+							.col.span_8_of_12
+								h3 Freelancer Web Designer
+								p Web design, Graphic design, front-end development.
 
-		article.container.box.style1.right
-			a.image.full
-				img(src='images/pic02.jpg', alt='')
-			.inner
-				header
-					h3
-						| Visual design
-				p
-					| To continue the analogue, visual design makes the end-product blossom. It's all there - everything works, feels AND looks as it should.
-				p
-					| Successful visual design delivers the message that lies beneath the surface. It's the translator of feelings and thoughts behind the product.
-				p
-					| In software develoment, visual design is often seen just as the icing on a cake. That statement is true only when all other components are carefully crafted as well.
-				p
-					| Visual design can exists even without interactions or functionalities. It's the fuel for the brain to provoke feelings, ideas and images.
+						.section.group.time-line-row
+							.col.span_3_of_12
+								h3 Leonidas Oy
+								p 10/2011 -
+							.col.span_1_of_12.time-line-wrapper
+								.time-line
+									.time-point.present
+							.col.span_8_of_1
+								h3 IX, UX and UI Designer
+								p Web and mobile app design, front-end development.
+						
+						.section.group.time-line-row
+							.col.span_3_of_12
+								h3 Gemilo Oy
+								p 10/2010 - 07/2011
+							.col.span_1_of_12.time-line-wrapper
+								.time-line
+									.time-point
+							.col.span_8_of_1
+								h3 User Experience Designer
+								p Web and Facebook app design.
 
-		article.container.box.style4
-			header
-				h2 port·fo·lio
-					small \pȯrt-ˈfō-lē-ˌō\
-				h3.subtitle
-					| A selection of work compiled over time
-					br
-					| and used for assessing performance.
+						.section.group.time-line-row
+							.col.span_3_of_12
+								h3 Futuvision Media
+								p 03/2009 - 10/2010
+							.col.span_1_of_12.time-line-wrapper
+								.time-line.end
+									.time-point
+							.col.span_8_of_1
+								h3 Graphic Designer
+								p Web site design, print design.
 
-		article.container.box.style2
-			.inner.gallery
-				.row.flush
-					.3u
-						a.image.full(href='images/fulls/01.jpg')
-							img(src='images/thumbs/01.jpg', alt='', title='Ad infinitum')
-					.3u
-						a.image.full(href='images/fulls/02.jpg')
-							img(src='images/thumbs/02.jpg', alt='', title='Dressed in Clarity')
-					.3u
-						a.image.full(href='images/fulls/03.jpg')
-							img(src='images/thumbs/03.jpg', alt='', title='Raven')
-					.3u
-						a.image.full(href='images/fulls/04.jpg')
-							img(src='images/thumbs/04.jpg', alt='', title='I have a cup of Disneyland, please')
-				.row.flush
-					.3u
-						a.image.full(href='images/fulls/05.jpg')
-							img(src='images/thumbs/05.jpg', alt='', title='Cherish')
-					.3u
-						a.image.full(href='images/fulls/06.jpg')
-							img(src='images/thumbs/06.jpg', alt='', title='Different.')
-					.3u
-						a.image.full(href='images/fulls/07.jpg')
-							img(src='images/thumbs/07.jpg', alt='', title='History was made here')
-					.3u
-						a.image.full(href='images/fulls/08.jpg')
-							img(src='images/thumbs/08.jpg', alt='', title='People come and go and walk away')
+						h2 Education
+							span.icon.li_bulb(aria-hidden="true")
+						
+						.section.group.time-line-row
+							.col.span_3_of_12
+								h3 TAMK Art and Media
+								p 2006 - 2010
+							.col.span_1_of_12.time-line-wrapper
+								.time-line
+									.time-point
+							.col.span_8_of_12
+								h3 Bachelor of Arts and Media
+								p Web design, typography, animation and print design.
 
-		article.container.box.style3
-			header
-				h2 Quick facts
-				h3 Here are my competences and skills in a nutshell.
-			form
-				.row.half
-					.6u
-						p
-							| I'm a 33-year-old Bachelor of Culture and Arts, living currently in Tampere, Finland.
-							| I've been working with web design for about 7 years. Currently I'm working as a designer in Leonidas Oy and as a freelancer at Kulma Collective Osk.
-						p
-							| My competences include the following:
-						ul
-							li Web layout design (Photoshop, Fireworks)
-							li Front-end development (HTML, CSS)
-							li Interaction and user experience design
-							li Logo & corporate identity design
-						p
-							| My main focus at the moment is on desktop UX and UI design, but I'm open for other opportunities as well.
-					.6u
-						ul
-							li +358 40 576 1283
-							li ville.tervo [at] gmail.com
-							li Ville Tervo
-								br
-								| Sammonkatu 21 C54
-								br
-								| 33540 Tampere
+						.section.group.time-line-row
+							.col.span_3_of_12
+								h3 JAMK University of Applied Sciences
+								p 2001 - 2005
+							.col.span_1_of_12.time-line-wrapper
+								.time-line.end
+									.time-point
+							.col.span_8_of_12
+								h3 Bachelor of Information Technology
+								p Data networks, cyber security.   
 
-		section#footer
-			.copyright
-				ul.menu
-					li © Ville Tervo. All rights reserved.
+						h2 Projects
+							span.icon.li_data(aria-hidden="true")
+						.left
+						.right
+						
+
+			section#footer
+				.copyright © Ville Tervo. All rights reserved.
+
+	script(src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
+	script
+		window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\\/script>')
+	
+	//if (lt IE 9) & (!IEMobile)
+		script(src="js/selectivizr-min.js")
+	
+	script(src="js/responsivegridsystem.js")	
