@@ -19,8 +19,7 @@ html
 		meta(name="MobileOptimized", content="320")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		
-		script(src="js/modernizr-2.5.3-min.js")
-		script(src='js/bundle.js')
+		script(src="js/modernizr.custom.js")
 
 	body
 
@@ -47,8 +46,8 @@ html
 								.about
 									h1 Ville Tervo
 									h3 Web Designer and Web Developer
-									p I'm a 33-year-old Web Designer and Web Developer, currently living and working in Tampere, Finland. The purpose of this resume is to give a comprehensive impression of my skills and knowledge.
-									a.button(href='#') Quick facts
+									p I'm a 33-year-old Web Designer and Web Developer, currently living and working in Tampere, Finland. I'm specialized in graphic and user interface design. My other skills include interaction design, front-end development and customer relations.
+									p The purpose of this resume is to give a comprehensive impression of my skills and knowledge.
 
 						h2 Work experience
 							span.icon.li_heart(aria-hidden="true")
@@ -122,20 +121,57 @@ html
 								h3 Bachelor of Information Technology
 								p Data networks, cyber security.   
 
-						h2 Projects
+						h2 Notable projects
 							span.icon.li_data(aria-hidden="true")
-						.left
-						.right
+
+						.section.group.time-line-row
+							.col.span_3_of_12
+								h3 Confidential
+								p 10/2012 - 06/2014
+							.col.span_1_of_12.time-line-wrapper
+								.time-line
+									.time-point
+							.col.span_8_of_12
+								h3 Self-service portal
+								p Research, design and HTML implementation of a custom build, ServiceNow based self-service portal.
+						
+						.section.group.time-line-row
+							.col.span_3_of_12
+								h3 Confidential
+								p 07/2013 - 01/2014
+							.col.span_1_of_12.time-line-wrapper
+								.time-line
+									.time-point
+							.col.span_8_of_12
+								h3 Resource planning system
+								p Design and HTML implementation of a resource planning system.
+
+						.section.group.time-line-row
+							.col.span_3_of_12
+								h3 Confidential
+								p 11/2012 - 06/2013
+							.col.span_1_of_12.time-line-wrapper
+								.time-line
+									.time-point
+							.col.span_8_of_12
+								h3 Message communications service
+								p Design and HTML implementation of a message communications dashboard.
+
+						.section.group.time-line-row
+							.col.span_3_of_12
+								h3 TAMK
+								p 12/2012 - 01/2014
+							.col.span_1_of_12.time-line-wrapper
+								.time-line.end
+									.time-point
+							.col.span_8_of_12
+								h3 Intranet
+								p Visual design, interaction design and HTML consultation.
+
 						
 
 			section#footer
 				.copyright © Ville Tervo. All rights reserved.
 
-	script(src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
-	script
-		window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\\/script>')
-	
-	//if (lt IE 9) & (!IEMobile)
-		script(src="js/selectivizr-min.js")
-	
-	script(src="js/responsivegridsystem.js")	
+	script(src="js/responsivegridsystem.js")
+	script(src='js/bundle.js')
