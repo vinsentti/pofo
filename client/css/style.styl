@@ -1,5 +1,6 @@
 @import "./client/css/mixins"
 @import "./client/css/init"
+@import "./client/css/base"
 
 color-1 = #5C323E
 color-2 = #A82743
@@ -43,7 +44,7 @@ h1
 h2
 	font-size 1em
 	text-transform uppercase
-	margin 0 0 1em 0
+	margin 0
 	.icon
 		float left
 		font-size 1.25em
@@ -80,9 +81,10 @@ header
 
 	h1.main-logo
 		width 100%
-		height 32px
+		height 68px
 		background url('../images/logo.svg') no-repeat
 		background-size 100%
+		opacity 0.75
 
 footer
 	margin-top 1em
@@ -98,7 +100,6 @@ article
 	.column,
 	.columns
 		margin-bottom 20px
-
 
 .clear
 	width 100%
@@ -170,7 +171,7 @@ article
 	margin 1.25em auto 0 auto
 
 .intro
-	padding 1.5em 0 0 16px
+	padding 1.5em 0 0 0
 	h1
 		margin-left -1px
 	h3
@@ -205,8 +206,10 @@ article
 			background #e5e5dc
 			margin-left 50%
 
-		&.end:before
-			background none
+		&.end
+			background white
+			&:before
+				display none
 
 	.time-point
 		width 12px
@@ -232,6 +235,10 @@ article
 
 	.present:before
 		background color-4
+
+.copyright
+	text-align center
+	margin 0.5em 0
 
 
 /* Smaller than standard 960 (devices and browsers) */
