@@ -8,6 +8,8 @@ color-3 = #E15E32
 color-4 = #C0D23E
 color-5 = #E5F04C
 
+neutral-1 = #e5e5dc
+
 text-light = #aaaaa4
 text-dark = #1e1e1d
 
@@ -196,7 +198,7 @@ article
 			display block
 			width 1px
 			height 100%
-			background #e5e5dc
+			background neutral-1
 			margin-left 50%
 
 		&.end
@@ -209,7 +211,7 @@ article
 		height 12px
 		background #FFFFFF
 		border-radius 6px
-		border 1px solid #e5e5dc
+		border 1px solid neutral-1
 		position absolute
 		top 0
 		left 50%
@@ -242,7 +244,7 @@ article
 			height 20px
 			border-radius 10px
 			color white
-			border 1px solid #e5e5dc
+			border 1px solid neutral-1
 			margin-right 16px
 
 			.full,
@@ -258,6 +260,48 @@ article
 
 			p.desc
 				font-style italic
+
+.pie
+	display inline-block
+	float left
+	width 240px
+	clear left
+	margin-top 16px
+	canvas
+		margin-left -5px
+
+ul.legends
+	float left
+	margin 20px 0 0 20px
+	padding 0
+	list-style-type none
+	li
+		font-size 0.625em
+	.legend
+		display inline-block
+		width 12px
+		height 12px
+		margin 0 6px -1px 0
+		&.first
+			background color-3
+		&.second
+			background color-4
+		&.third
+			background color-5
+
+.contact
+	margin-top 20px
+	span.text
+		display block
+		margin-left 24px
+	span.icon
+		width 20px
+		height 20px
+		font-size 16px
+		float left
+		margin-top 2px
+		color color-2
+	
 
 
 .copyright

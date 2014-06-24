@@ -283,13 +283,47 @@ html
 							.circle
 							p.desc Basics
 
-				article#contact
-					.seven.columns.offset-by-one
-						h2 Contact me
-							span.icon.li_mail
+				article
+					.ten.columns.offset-by-one
+						h2 Current focus
+							.icon.li_key
+						.pie
+							canvas#canvas(height='160', width='160')
+						ul.legends
+							li
+								span.legend.first
+								| UX Design
+							li
+								span.legend.second
+								| Interaction Design
+							li
+								span.legend.third
+								| Graphic Design
 
+					.five.columns
+						h2 Contact me
+						.clear
+						p.contact
+							span.icon.li_mail
+							span.text
+								| Ville Tervo
+								br
+								| Sammonkatu 21 C 54
+								br
+								| 33540 Tampere
+								br
+								| Finland
+						p.contact
+							span.icon.li_paperplane
+							span.text
+								| ville.tervo@gmail.com
+						p.contact
+							span.icon.li_phone
+							span.text
+								| +358 40 576 1283
 
 			section#footer
 				p.copyright © Ville Tervo. All rights reserved.
 
+	script(src='js/Chart.min.js')
 	script(src='js/bundle.js')
