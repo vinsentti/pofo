@@ -6,11 +6,8 @@ html
 		
 		link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Ubuntu:300,700,300italic')
 		link(rel='stylesheet', type='text/css', href='fonts/fonts.css')
+		link(rel='stylesheet', type='text/css', href='css/base.css')
 		link(rel='stylesheet', type='text/css', href='css/style.css')
-
-		link(rel="stylesheet", media="only screen and (max-width: 1024px) and (min-width: 769px)", href="css/1024.css")
-		link(rel="stylesheet", media="only screen and (max-width: 768px) and (min-width: 481px)", href="css/768.css")
-		link(rel="stylesheet", media="only screen and (max-width: 480px)", href="css/480.css")
 
 		link(rel="shortcut icon", href="/favicon.ico")
 		
@@ -18,160 +15,154 @@ html
 		meta(name="HandheldFriendly", content="True")
 		meta(name="MobileOptimized", content="320")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
-		
-		script(src="js/modernizr.custom.js")
 
 	body
 
-		.main-container
+		.container
 
-			section#header
-				header
-					h2 Hello and welcome!
+			header
+				.four.columns.offset-by-one
+					h1.main-logo
 
-			section#pages
-				article.page
-					.section.group.stripes
-						.stripe-col.color-1
-						.stripe-col.color-2
-						.stripe-col.color-3
-						.stripe-col.color-4
-						.stripe-col.color-5
-					.page-content
+			section.page
 
-						.section.group
-							.col.span_4_of_12
-								.headshot
-							.col.span_8_of_12
-								.about
-									h1 Ville Tervo
-									h3 Web Designer and Web Developer
-									p I'm a 33-year-old Web Designer and Web Developer, currently living and working in Tampere, Finland. I'm specialized in graphic and user interface design. My other skills include interaction design, front-end development and customer relations.
-									p The purpose of this resume is to give a comprehensive impression of my skills and knowledge.
+				#stripes.sixteen.columns
+					.four.columns.color-1
+					.two.columns.color-2
+					.one.column.color-3
+					.three.columns.color-4
+					.seven.columns.color-5
+				
+				article#about
 
+					.four.columns.offset-by-one
+						.headshot
+					.nine.columns
+						.intro
+							h1 Ville Tervo
+							h3 Web Designer and Web Developer
+							p I'm a 33-year-old Web Designer and Web Developer, currently living and working in Tampere, Finland. I'm specialized in graphic and user interface design. My other skills include interaction design, front-end development and customer relations.
+							p The purpose of this resume is to give a comprehensive impression of my skills and knowledge.
+
+				article#work
+					.fifteen.columns.offset-by-one
 						h2 Work experience
 							span.icon.li_heart(aria-hidden="true")
 
-						.section.group.time-line-row
-							.col.span_3_of_12
-								h3 Kulma Collective
-								p 01/2012 -
-							.col.span_1_of_12.time-line-wrapper
-								.time-line
-									.time-point.present
-							.col.span_8_of_12
-								h3 Freelancer Web Designer
-								p Web design, Graphic design, front-end development.
+					.four.columns.offset-by-one
+						h3 Kulma Collective
+						p 01/2012 -
+					.one.column.time-line-wrapper
+						.time-line
+							.time-point.present
+					.eight.columns
+						h3 Freelancer Web Designer
+						p Web design, Graphic design, front-end development.
 
-						.section.group.time-line-row
-							.col.span_3_of_12
-								h3 Leonidas Oy
-								p 10/2011 -
-							.col.span_1_of_12.time-line-wrapper
-								.time-line
-									.time-point.present
-							.col.span_8_of_1
-								h3 IX, UX and UI Designer
-								p Web and mobile app design, front-end development.
-						
-						.section.group.time-line-row
-							.col.span_3_of_12
-								h3 Gemilo Oy
-								p 10/2010 - 07/2011
-							.col.span_1_of_12.time-line-wrapper
-								.time-line
-									.time-point
-							.col.span_8_of_1
-								h3 User Experience Designer
-								p Web and Facebook app design.
+					.four.columns.offset-by-one
+						h3 Leonidas Oy
+						p 10/2011 -
+					.one.column.time-line-wrapper
+						.time-line
+							.time-point.present
+					.eight.columns
+						h3 IX, UX and UI Designer
+						p Web and mobile app design, front-end development.
+				
+					.four.columns.offset-by-one
+						h3 Gemilo Oy
+						p 10/2010 - 07/2011
+					.one.column.time-line-wrapper
+						.time-line
+							.time-point
+					.eight.columns
+						h3 User Experience Designer
+						p Web and Facebook app design.
 
-						.section.group.time-line-row
-							.col.span_3_of_12
-								h3 Futuvision Media
-								p 03/2009 - 10/2010
-							.col.span_1_of_12.time-line-wrapper
-								.time-line.end
-									.time-point
-							.col.span_8_of_1
-								h3 Graphic Designer
-								p Web site design, print design.
+					.four.columns.offset-by-one
+						h3 Futuvision Media
+						p 03/2009 - 10/2010
+					.one.column.time-line-wrapper
+						.time-line.end
+							.time-point
+					.eight.columns
+						h3 Graphic Designer
+						p Web site design, print design.
 
+				article#education
+
+					.fifteen.columns.offset-by-one
 						h2 Education
 							span.icon.li_bulb(aria-hidden="true")
-						
-						.section.group.time-line-row
-							.col.span_3_of_12
-								h3 TAMK Art and Media
-								p 2006 - 2010
-							.col.span_1_of_12.time-line-wrapper
-								.time-line
-									.time-point
-							.col.span_8_of_12
-								h3 Bachelor of Arts and Media
-								p Web design, typography, animation and print design.
+				
+					.four.columns.offset-by-one
+						h3 TAMK Art and Media
+						p 2006 - 2010
+					.one.column.time-line-wrapper
+						.time-line
+							.time-point
+					.eight.columns
+						h3 Bachelor of Arts and Media
+						p Web design, typography, animation and print design.
 
-						.section.group.time-line-row
-							.col.span_3_of_12
-								h3 JAMK University of Applied Sciences
-								p 2001 - 2005
-							.col.span_1_of_12.time-line-wrapper
-								.time-line.end
-									.time-point
-							.col.span_8_of_12
-								h3 Bachelor of Information Technology
-								p Data networks, cyber security.   
+					.four.columns.offset-by-one
+						h3 JAMK University of Applied Sciences
+						p 2001 - 2005
+					.one.column.time-line-wrapper
+						.time-line.end
+							.time-point
+					.eight.columns
+						h3 Bachelor of Information Technology
+						p Data networks, cyber security.   
 
+				article#projects
+
+					.fifteen.columns.offset-by-one
 						h2 Notable projects
 							span.icon.li_data(aria-hidden="true")
 
-						.section.group.time-line-row
-							.col.span_3_of_12
-								h3 Confidential
-								p 10/2012 - 06/2014
-							.col.span_1_of_12.time-line-wrapper
-								.time-line
-									.time-point
-							.col.span_8_of_12
-								h3 Self-service portal
-								p Research, design and HTML implementation of a custom build, ServiceNow based self-service portal.
-						
-						.section.group.time-line-row
-							.col.span_3_of_12
-								h3 Confidential
-								p 07/2013 - 01/2014
-							.col.span_1_of_12.time-line-wrapper
-								.time-line
-									.time-point
-							.col.span_8_of_12
-								h3 Resource planning system
-								p Design and HTML implementation of a resource planning system.
+					.four.columns.offset-by-one
+						h3 Confidential
+						p 10/2012 - 06/2014
+					.one.column.time-line-wrapper
+						.time-line
+							.time-point
+					.eight.columns
+						h3 Self-service portal
+						p Research, design and HTML implementation of a custom build, ServiceNow based self-service portal.
+				
+					.four.columns.offset-by-one
+						h3 Confidential
+						p 07/2013 - 01/2014
+					.one.column.time-line-wrapper
+						.time-line
+							.time-point
+					.eight.columns
+						h3 Resource planning system
+						p Design and HTML implementation of a resource planning system.
 
-						.section.group.time-line-row
-							.col.span_3_of_12
-								h3 Confidential
-								p 11/2012 - 06/2013
-							.col.span_1_of_12.time-line-wrapper
-								.time-line
-									.time-point
-							.col.span_8_of_12
-								h3 Message communications service
-								p Design and HTML implementation of a message communications dashboard.
+					.four.columns.offset-by-one
+						h3 Confidential
+						p 11/2012 - 06/2013
+					.one.column.time-line-wrapper
+						.time-line
+							.time-point
+					.eight.columns
+						h3 Message communications service
+						p Design and HTML implementation of a message communications dashboard.
 
-						.section.group.time-line-row
-							.col.span_3_of_12
-								h3 TAMK
-								p 12/2012 - 01/2014
-							.col.span_1_of_12.time-line-wrapper
-								.time-line.end
-									.time-point
-							.col.span_8_of_12
-								h3 Intranet
-								p Visual design, interaction design and HTML consultation.
-
-						
+					.four.columns.offset-by-one
+						h3 TAMK
+						p 12/2012 - 01/2014
+					.one.column.time-line-wrapper
+						.time-line.end
+							.time-point
+					.eight.columns
+						h3 Intranet
+						p Visual design, interaction design and HTML consultation.
+		
 
 			section#footer
 				.copyright © Ville Tervo. All rights reserved.
 
-	script(src="js/responsivegridsystem.js")
 	script(src='js/bundle.js')
