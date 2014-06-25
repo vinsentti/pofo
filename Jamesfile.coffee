@@ -14,6 +14,10 @@ transmogrifyCoffee = (debug) ->
       path: './client/js/vendor/jquery/jquery.js'
       exports: '$'
 
+    chartjs:
+      path: './client/js/vendor/chartjs/Chart.js'
+      exports: 'Chart'
+
   bundle = james.read shim(browserify(), libs)
     .transform(coffeeify)
     .require(require.resolve('./client/js/main.coffee'), entry: true)

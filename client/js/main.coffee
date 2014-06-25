@@ -1,3 +1,5 @@
+Chart = require 'chartjs'
+
 pieData = [
   {
     value: 30
