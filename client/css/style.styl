@@ -14,324 +14,389 @@ text-light = #aaaaa4
 text-dark = #1e1e1d
 
 html, body
-	margin 0
-	padding 0
+  margin 0
+  padding 0
 
 body
-	background-image url('../images/body-bg.png')
+  background-image url('../images/body-bg.png')
 
 body,input,textarea,select
-	font-family 'Ubuntu', sans-serif
-	font-size 20px
-	line-height 1.75em
-	font-weight 300
-	letter-spacing 1px
-	color text-dark
+  font-family 'Ubuntu', sans-serif
+  font-size 20px
+  line-height 1.75em
+  font-weight 300
+  letter-spacing 1px
+  color text-dark
 
 h1,h2,h3,h4,h5,h6
-	font-family 'Ubuntu', sans-serif
-	line-height 1.5em
-	color text-dark
+  font-family 'Ubuntu', sans-serif
+  line-height 1.5em
+  color text-dark
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
-	color inherit
-	text-decoration none
-	text-transform uppercase
+  color inherit
+  text-decoration none
+  text-transform uppercase
 
 h1
-	font-size 1.5em
-	line-height 1em
-	text-transform uppercase
+  font-size 1.5em
+  line-height 1em
+  text-transform uppercase
 
 h2
-	font-size 1em
-	text-transform uppercase
-	margin 0
-	.icon
-		float left
-		font-size 1.25em
-		margin 2px 12px 0 0
-		color color-2
+  font-size 1em
+  text-transform uppercase
+  margin 0
+  .icon
+    float left
+    font-size 1.25em
+    margin 2px 12px 0 0
+    color color-2
 
 h3
-	font-size 0.625em
-	font-weight 700
+  font-size 0.625em
+  font-weight 700
 
 strong, b
-	font-weight 700
+  font-weight 700
 
 em, i
-	font-style italic
+  font-style italic
 
 a
-	color text-dark
-	transition border-color 0.35s ease-in-out, color 0.35s ease-in-out
-	text-decoration none
-	border-bottom dotted 1px text-light
-	&:hover
-		color color-4
-		border-bottom-color color-4
+  color text-dark
+  transition border-color 0.35s ease-in-out, color 0.35s ease-in-out
+  text-decoration none
+  border-bottom dotted 1px text-light
+  &:hover
+    color color-4
+    border-bottom-color color-4
 
 p
-	font-size 0.625em
-	line-height 1.5em
-	color text-dark
+  font-size 0.625em
+  line-height 1.5em
+  color text-dark
 
 header
-	width 100%
-	height 40px
+  width 100%
+  height 40px
 
 footer
-	margin-top 1em
+  margin-top 1em
 
 br.clear
-	clear both
+  clear both
 
 article
-	width 100%
-	padding 20px 0
-	overflow hidden
+  width 100%
+  padding 20px 0
+  overflow hidden
 
-	.column,
-	.columns
-		margin-bottom 20px
+  .column,
+  .columns
+    margin-bottom 20px
 
 .clear
-	width 100%
-	height 1px
-	clear both
+  width 100%
+  height 1px
+  clear both
 
 .button
-	position relative
-	display inline-block
-	line-height 36px
-	cursor pointer
-	text-decoration none
-	outline 0
-	padding 0 1.5em
-	text-align center
-	font-size 0.625em
-	font-weight 700
-	background color-3
-	transition background 150ms ease-in-out
-	margin-top 1em
-	color #fff
-	&:hover
-		background color-2
+  position relative
+  display inline-block
+  line-height 36px
+  cursor pointer
+  text-decoration none
+  outline 0
+  padding 0 1.5em
+  text-align center
+  font-size 0.625em
+  font-weight 700
+  background color-3
+  transition background 150ms ease-in-out
+  margin-top 1em
+  color #fff
+  &:hover
+    background color-2
 
 .main-container
-	clear both
-	width 80%
-	max-width 794px
-	margin 0 auto
-	padding 1em 0
-	position relative
+  clear both
+  width 80%
+  max-width 794px
+  margin 0 auto
+  padding 1em 0
+  position relative
 
 .page
-	background #fff
-	margin 0 auto
-	box-shadow 0 1px 1px rgba(0, 0, 0, .2)
-	overflow hidden
-	padding-bottom 20px
+  width 930px
+  background #fff
+  margin 0 auto
+  box-shadow 0 1px 1px rgba(0, 0, 0, .2)
+  overflow hidden
+  padding-bottom 20px
 
 #stripes
-	margin-left 0
-	margin-right 0
-	width 100%
+  margin-left 0
+  margin-right 0
+  width 100%
 
-	.column,
-	.columns
-		height 8px
-		margin-left 0
-		margin-right 0
-	.color-1
-		background color-1
-	.color-2
-		background color-2
-	.color-3
-		background color-3
-	.color-4
-		background color-4
-	.color-5
-		background color-5
-		width 440px
-	
+  .column,
+  .columns
+    height 8px
+    margin-left 0
+    margin-right 0
+  .color-1
+    background color-1
+  .color-2
+    background color-2
+  .color-3
+    background color-3
+  .color-4
+    background color-4
+  .color-5
+    background color-5
+    width 410px
+
 .headshot
-	overflow hidden
-	width 220px
-	height 220px
-	border-radius 110px
-	background url('../images/ville.jpg') no-repeat
-	background-size 150%
-	margin 1.25em auto 0 auto
+  overflow hidden
+  width 220px
+  height 220px
+  border-radius 110px
+  background url('../images/ville.jpg') no-repeat
+  background-size 150%
+  margin 1.25em auto 0 auto
 
 .intro
-	padding 1.5em 0 0 0
-	h1
-		margin-left -1px
-	h3
-		color text-light
-		text-transform uppercase
-		font-weight 300
-		margin 0.5em 0 1em 0
-	p
-		margin 1em 0
+  padding 1.5em 0 0 0
+  h1
+    margin-left -1px
+  h3
+    color text-light
+    text-transform uppercase
+    font-weight 300
+    margin 0.5em 0 1em 0
+  p
+    margin 1em 0
 
 
 .time-line-wrapper
-	position relative
-	text-indent -9999px
-	&:after
-		content '*'
-		opacity 0
+  position relative
+  text-indent -9999px
+  &:after
+    content '*'
+    opacity 0
 
-	.time-line
-		position absolute
-		top 3px
-		left 0
-		bottom -150%
-		width 100%
+  .time-line
+    position absolute
+    top 3px
+    left 0
+    bottom -150%
+    width 100%
 
-		&:before
-			position absolute
-			content ' '
-			display block
-			width 1px
-			height 100%
-			background neutral-1
-			margin-left 50%
+    &:before
+      position absolute
+      content ' '
+      display block
+      width 1px
+      height 100%
+      background neutral-1
+      margin-left 50%
 
-		&.end
-			background white
-			&:before
-				display none
+    &.end
+      background white
+      &:before
+        display none
 
-	.time-point
-		width 12px
-		height 12px
-		background #FFFFFF
-		border-radius 6px
-		border 1px solid neutral-1
-		position absolute
-		top 0
-		left 50%
-		margin-left -6px
+  .time-point
+    width 12px
+    height 12px
+    background #FFFFFF
+    border-radius 6px
+    border 1px solid neutral-1
+    position absolute
+    top 0
+    left 50%
+    margin-left -6px
 
-		&:before
-			content '*'
-			text-indent -9999px
-			position absolute
-			left 2px
-			top 2px
-			width 8px
-			height 8px
-			border-radius 4px
-			background text-light
+    &:before
+      content '*'
+      text-indent -9999px
+      position absolute
+      left 2px
+      top 2px
+      width 8px
+      height 8px
+      border-radius 4px
+      background text-light
 
-	.present:before
-		background color-4
+  .present:before
+    background color-4
 
 #skills
-	.four.columns
-		margin-bottom 0
+  .four.columns
+    margin-bottom 0
 
-	.rating
-		margin 10px 0 20px 0
+  .rating
+    margin 10px 0 20px 0
 
-		.circle
-			display inline-block
-			width 16px
-			height 16px
-			border-radius 8px
-			color white
-			border 1px solid neutral-1
-			margin-right 8px
+    .circle
+      display inline-block
+      width 16px
+      height 16px
+      border-radius 8px
+      color white
+      border 1px solid neutral-1
+      margin-right 8px
 
-			.full,
-			.half
-				width 12px
-				height 12px
-				margin 2px
-				border-radius 6px
-				background color-4
-			.half
-				width 6px
-				border-radius 6px 0 0 6px
+      .full,
+      .half
+        width 12px
+        height 12px
+        margin 2px
+        border-radius 6px
+        background color-4
+      .half
+        width 6px
+        border-radius 6px 0 0 6px
 
-			p.desc
-				font-style italic
+      p.desc
+        font-style italic
 
 .pie
-	display inline-block
-	float left
-	clear left
-	margin-top 16px
-	canvas
-		margin-left -5px
+  display inline-block
+  float left
+  clear left
+  margin-top 16px
+  canvas
+    margin-left -5px
 
 ul.legends
-	float left
-	margin 26px 0 0 40px
-	padding 0
-	list-style-type none
-	li
-		font-size 0.625em
-	.legend
-		display inline-block
-		width 12px
-		height 12px
-		margin 0 6px -1px 0
-		&.first
-			background color-5
-		&.second
-			background color-4
-		&.third
-			background color-3
-		&.fourth
-			background color-2
-			
+  float left
+  margin 26px 0 0 40px
+  padding 0
+  list-style-type none
+  li
+    font-size 0.625em
+  .legend
+    display inline-block
+    width 12px
+    height 12px
+    margin 0 6px -1px 0
+    &.first
+      background color-5
+    &.second
+      background color-4
+    &.third
+      background color-3
+    &.fourth
+      background color-2
+
 
 .contact
-	margin-top 20px
-	span.text
-		display block
-		margin-left 24px
-	span.icon
-		width 20px
-		height 20px
-		font-size 16px
-		float left
-		margin-top 2px
-		color color-2
-	
-
+  margin-top 20px
+  span.text
+    display block
+    margin-left 24px
+  span.icon
+    width 20px
+    height 20px
+    font-size 16px
+    float left
+    margin-top 2px
+    color color-2
 
 .copyright
-	text-align center
-	margin 1em 0
+  text-align center
+  margin 1em 0
 
 
-/* Smaller than standard 960 (devices and browsers) */
+/* Smaller than standard 960 (devices and browsers)
 @media only screen and (max-width: 959px)
-	body
-		background red
+  .page
+    width 738px
+  #stripes .color-5
+    width 338px
+  .headshot
+    width 172px
+    height 172px */
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px)
-	body
-		background green
+  .page
+    width 738px
+  #stripes .color-5
+    width 338px
+  .headshot
+    width 172px
+    height 172px
 
-/* All Mobile Sizes (devices and browser) */
+/* All Mobile Sizes (devices and browser)
 @media only screen and (max-width: 767px)
-	body
-		background blue
+  body
+    background blue
+  .page
+    width 450px */
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px)
-	body
-		background yellow
+  .page
+    width 450px
+  #stripes
+    margin-bottom 0
+    .columns,
+    .column
+      width 20%
+      margin-bottom 0
+  #about
+    .four.columns
+      display none
+  .intro
+    padding 0.5em 0 0 0
+  article
+    box-sizing border-box
+    padding 15px 15px 0 15px
+  .container
+    .columns
+      margin-bottom 20px
+    .four.columns
+      width 40%
+    .eight.columns
+      width 60%
+  #skills
+    .four.columns
+      width 33.333%
+    .rating
+      margin-top 0
+      .circle
+        width 12px
+        height 12px
+        border-radius 6px
+        margin-right 6px
+        .full
+          width 8px
+          height 8px
+          border-radius 4px
+        .half
+          width 4px
+          height 8px
+          border-radius 4px 0 0 4px
+  #work,
+  #education,
+  #projects
+    .time-line-wrapper
+      display none
+  #pie-chart
+    display none
+  #contact-info
+    width 100%
+    .contact.one-third
+      width 33.333%
+      float left
+    .contact.two-thirds
+      width 50%
+      margin-left 50%
 
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
 @media only screen and (max-width: 479px)
-	body
-		background white
+  body
+    background white */
