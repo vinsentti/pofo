@@ -292,7 +292,8 @@ ul.legends
     &.fourth
       background color-2
 
-
+#contact-info
+  padding-top 32px
 .contact
   margin-top 20px
   span.text
@@ -311,18 +312,8 @@ ul.legends
   margin 1em 0
 
 
-/* Smaller than standard 960 (devices and browsers)
+/* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px)
-  .page
-    width 738px
-  #stripes .color-5
-    width 338px
-  .headshot
-    width 172px
-    height 172px */
-
-/* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) and (max-width: 959px)
   .page
     width 738px
   #stripes .color-5
@@ -331,17 +322,24 @@ ul.legends
     width 172px
     height 172px
 
-/* All Mobile Sizes (devices and browser)
-@media only screen and (max-width: 767px)
-  body
-    background blue
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px)
+  header
+    height 30px
   .page
-    width 450px */
+    width 708px
+  #stripes .color-5
+    width 308px
+  .container
+    .column,
+    .columns
+      margin-left 0
+  #pie-chart
+    width 426px
 
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px)
-  .page
-    width 450px
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px)
   #stripes
     margin-bottom 0
     .columns,
@@ -350,7 +348,7 @@ ul.legends
       margin-bottom 0
   #about
     .four.columns
-      display none
+      width 100%
   .intro
     padding 0.5em 0 0 0
   article
@@ -386,10 +384,10 @@ ul.legends
   #projects
     .time-line-wrapper
       display none
-  #pie-chart
-    display none
+
   #contact-info
     width 100%
+    padding-top 0
     .contact.one-third
       width 33.333%
       float left
@@ -397,7 +395,51 @@ ul.legends
       width 50%
       margin-left 50%
 
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px)
+  header
+    height 20px
+  .page
+    width 100%
+  #contact-info
+    width 100%
+    .contact
+      &.one-third
+        width 50%
+      &.two-thirds
+        width 50%
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px)
-  body
-    background white */
+  header
+    height 10px
+  .page
+    width 100%
+  .container
+    .columns
+      margin-bottom 15px
+    .four.columns
+      width 50%
+    .eight.columns
+      width 50%
+  #skills
+    .four.columns
+      width 100%
+    .rating
+      margin-bottom 15px
+      .circle
+        margin-bottom -2px
+      p.desc
+        display inline-block
+        margin-left 12px
+  #contact-info
+    width 100%
+    .contact
+      &.one-third
+        width 100%
+        float none
+      &.two-thirds
+        width 100%
+        margin-left 0
+  #pie-chart
+    display none
