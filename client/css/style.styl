@@ -457,3 +457,56 @@ ul.legends
         margin-left 0
   #pie-chart
     display none
+
+/* Print CSS */
+@media print
+  .container
+    width 100%
+    .eight.columns
+      width 520px
+
+  .page
+    width 930px
+    box-shadow none
+    border none
+
+  #about
+    .four.columns
+      display none
+    .nine.columns
+      width 580px
+  h2
+    margin-top 20px
+    span
+      display none
+
+  article
+    padding 0
+  header
+    height 0
+  .time-line,
+  .time-point
+    display none
+  #skills
+    .rating
+      margin-top 0
+      margin-bottom 0
+      .circle
+        display none
+
+  #pie-chart
+    display none
+
+  #contact-info
+    position absolute
+    top 100px
+    right 0
+    padding 20px 10px 26px 10px
+    border 1px dashed neutral-1
+    .contact
+      margin-top 6px
+    .icon
+      display none
+
+  #footer
+    display none
