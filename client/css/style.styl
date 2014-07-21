@@ -293,9 +293,9 @@ ul.legends
       background color-2
 
 #contact-info
-  padding-top 32px
+  padding-top 51px
 .contact
-  margin-top 20px
+  margin-top 16px
   span.text
     display block
     margin-left 24px
@@ -334,6 +334,8 @@ ul.legends
     .column,
     .columns
       margin-left 0
+      &.eight
+        margin-left 10px
   #pie-chart
     width 426px
 
@@ -362,8 +364,9 @@ ul.legends
     .eight.columns
       width 60%
   #skills
-    .four.columns
-      width 33.333%
+    .four.columns,
+    .five.columns
+      width 40%
     .rating
       margin-top 0
       .circle
@@ -384,6 +387,15 @@ ul.legends
   #projects
     .time-line-wrapper
       display none
+
+  #pie-canvas
+    width 120px !important
+    height 120px !important
+    margin-top 20px
+
+  .intro h1,
+  .intro h3
+    text-align center
 
   #contact-info
     width 100%
@@ -423,10 +435,12 @@ ul.legends
     .eight.columns
       width 50%
   #skills
-    .four.columns
+    .four.columns,
+    .five.columns
       width 100%
-    .rating
       margin-bottom 15px
+    .rating
+      margin-bottom 0
       .circle
         margin-bottom -2px
       p.desc

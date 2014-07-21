@@ -19,4 +19,4 @@ pieData = [
   }
 ]
 
-myPie = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(pieData)
+myPie = new Chart(document.getElementById("pie-canvas").getContext("2d")).Doughnut(pieData)
